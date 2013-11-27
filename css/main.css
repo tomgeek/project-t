@@ -1,0 +1,14 @@
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+#game {
+  margin: 30px auto;
+  background: url(../resources/bg.png);
+
+  display: block;
+  border:1px solid #222;
+  box-shadow: 0 0 30px #000;
+}
+

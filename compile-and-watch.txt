@@ -1,0 +1,1 @@
+coffee -j script/main.js -w -c src/config.coffee src/PlayerDirection.coffee src/Player.coffee src/keys.coffee src/Gfx.coffee src/Game.coffee src/Main.coffee
