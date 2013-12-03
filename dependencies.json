@@ -1,0 +1,47 @@
+{
+    "paths": {
+        "CONFIG_PATH": "config",
+        "CHARACTERS_PATH": "game/objects/characters",
+        "GUI_PATH": "gui",
+        "MIXINS_PATH": "mixins"
+    },
+    "dependencies": {
+        "global": [
+            "#{CONFIG_PATH}/gameConfig",
+            "#{CONFIG_PATH}/level1",
+            "#{CONFIG_PATH}/levels",
+            "#{CHARACTERS_PATH}/player/PlayerDirection",
+            "#{MIXINS_PATH}/Movable"
+        ],
+        "root": "Main"
+    },
+    "classDefinition": {
+        "Character": {
+            "path": "#{CHARACTERS_PATH}/Character",
+            "dependencies": "Object"
+        },
+        "Object": {
+            "path": "game/objects/Object"
+        },
+        "Gfx": {
+            "path": "#{GUI_PATH}/Gfx"
+        },
+        "Game": {
+            "path": "game/Game",
+            "dependencies": "Player"
+        },
+        "Player": {
+            "path": "#{CHARACTERS_PATH}/player/Player",
+            "dependencies": ["Controls", "Character"]
+        },
+        "Controls": {
+            "path": "#{CHARACTERS_PATH}/player/Controls"
+        },
+        "Main": {
+            "path": "Main",
+            "dependencies": [
+                "Gfx", "Game"
+            ]
+        }
+    }
+}
