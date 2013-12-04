@@ -22,7 +22,7 @@ if (isset($content->dependencies->root)) {
 	if (array_key_exists($content->dependencies->root, $content->classDefinition)) {
 		$value = $content->classDefinition[$content->dependencies->root];
 		unset($content->classDefinition[$content->dependencies->root]);
-		$content->classDefinition = array($content->dependencies->root => $value) + $content->classDefinition;
+		$content->classDefinition = $content->classDefinition + array($content->dependencies->root => $value);
 	}
 }
 
