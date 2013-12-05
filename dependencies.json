@@ -8,7 +8,6 @@
     "dependencies": {
         "global": [
             "#{CONFIG_PATH}/gameConfig",
-            "#{CONFIG_PATH}/level1",
             "#{CONFIG_PATH}/levels",
             "#{CHARACTERS_PATH}/player/PlayerDirection",
             "#{MIXINS_PATH}/Movable"
@@ -16,12 +15,11 @@
         "root": "Main"
     },
     "classDefinition": {
-        "Character": {
-            "path": "#{CHARACTERS_PATH}/Character",
-            "dependencies": "Object"
-        },
-        "Object": {
-            "path": "game/objects/Object"
+        "Main": {
+            "path": "Main",
+            "dependencies": [
+                "Gfx", "Game"
+            ]
         },
         "Gfx": {
             "path": "#{GUI_PATH}/Gfx"
@@ -37,11 +35,12 @@
         "Controls": {
             "path": "#{CHARACTERS_PATH}/player/Controls"
         },
-        "Main": {
-            "path": "Main",
-            "dependencies": [
-                "Gfx", "Game"
-            ]
+        "Character": {
+            "path": "#{CHARACTERS_PATH}/Character",
+            "dependencies": "Object"
+        },
+        "Object": {
+            "path": "game/objects/Object"
         }
     }
 }
