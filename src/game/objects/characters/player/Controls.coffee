@@ -12,7 +12,6 @@ class Controls
 	reset: ->
 		@up = @down = @left = @right = @space = @shift = false
 	trigger: (keyCode, isDown) ->
-		console.log keyCode
 		switch keyCode
 			when 37 then @left = isDown
 			when 39 then @right = isDown
