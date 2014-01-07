@@ -1,7 +1,7 @@
 class Object
 	constructor: (@x, @y, @width, @height) ->
 		console.log "Object init"
-		@implement @interfaces
+		@implement @interfaces if @interfaces?
 	implement: (interfaceImpl) ->
 		include @, interfaceImpl
 
