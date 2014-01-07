@@ -2,6 +2,8 @@ var resolvedDependencies = [], srcFolder = "src", extension = "coffee",
     CLASS_REGEXP = /\[object (.*?)\]/, PLACEHOLDER_REGEXP = /#\{(.*)\}/,
     json, classDefinitions, paths, allDependencies, command;
 
+//set script current directory to the directory where the script is based
+process.chdir(__dirname);
 readDependenciesFile("dependencies.json");
 
 allDependencies = getAllDependencies(json);
