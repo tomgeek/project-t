@@ -27,18 +27,11 @@ class Gfx
 		@w = @canvas.width = @tileDimension * width
 		@h = @canvas.height = @tileDimension * height
 
-	drawLevel: (levelMap) ->
-		colNum = rowNum = 0
-		for tile in levelMap
-			if tile == "\n"
-				++rowNum
-				colNum = 0
-				continue
-			### air ###
-			if tile isnt "."
-				tilePos = gameConfig.tiles[tile]
-				@drawSprite tilePos.x, tilePos.y, colNum * @tileDimension, rowNum * @tileDimension
-			++colNum
+	drawLevel: (blocks) ->
+		for block in blocks
+			if block.type isnt "."
+				tilePos = gameConfig.tiles[block.type]
+				@drawSprite tilePos.x, tilePos.y, block.x, block.y
 
 	drawPlayer: (x, y, direction) ->
 		if direction == PlayerDirection.LEFT then playerSpriteX = @playerLeftSpriteX else playerSpriteX = @playerRightSpriteX

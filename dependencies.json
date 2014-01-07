@@ -26,7 +26,10 @@
         },
         "Game": {
             "path": "game/Game",
-            "dependencies": "Player"
+            "dependencies": ["Player", "Block", "CollisionManager"]
+        },
+        "CollisionManager": {
+            "path": "game/physics/CollisionManager"
         },
         "Player": {
             "path": "#{CHARACTERS_PATH}/player/Player",
@@ -41,6 +44,10 @@
         },
         "Object": {
             "path": "game/objects/Object"
+        },
+        "Block": {
+            "path": "game/objects/blocks/Block",
+            "dependencies": "Object"
         }
     }
 }

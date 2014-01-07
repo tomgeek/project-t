@@ -4,6 +4,7 @@ class Player extends Character
 	runSpeed: 2.5
 	altitude: 0
 	direction: PlayerDirection.RIGHT
+	isCollidable: true
 	constructor: (x, y) ->
 		console.log "player init #{x}, #{y}"
 		super x, y, gameConfig.tileDimension, gameConfig.tileDimension
